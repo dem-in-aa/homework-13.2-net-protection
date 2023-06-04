@@ -67,6 +67,7 @@ sudo suricata-update -o /etc/suricata/rules
 Также можно добавить правила от сторонних поставщиков:
 ```
 sudo suricata-update list-sources
+sudo suricata-update enable-source tgreen/hunting -o /etc/suricata/rules
 ```
 
 После загрузки правил необходимо проверить валидность конфигурации:
