@@ -64,6 +64,11 @@ sudo suricata-update -o /etc/suricata/rules
 ```
 ![](img/1-2.png)
 
+Также можно добавить правила от сторонних поставщиков:
+```
+sudo suricata-update list-sources
+```
+
 После загрузки правил необходимо проверить валидность конфигурации:
 ```
 sudo suricata -T -c /etc/suricata/suricata.yaml -v
