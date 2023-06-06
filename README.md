@@ -94,312 +94,158 @@ jq 'select(.alert)' /var/log/suricata/eve.json
 ```
 ```
 {
-
   "timestamp": "2023-06-06T22:25:33.344112+0600",
-
   "flow_id": 1826545941168176,
-
   "in_iface": "enp0s3",
-
   "event_type": "alert",
-
   "src_ip": "192.168.0.66",
-
   "src_port": 34082,
-
   "dest_ip": "192.168.0.20",
-
   "dest_port": 5815,
-
   "proto": "TCP",
-
   "community_id": "1:h+hF8ztNrqL9z/VwH+GORxLx3dc=",
-
   "alert": {
-
     "action": "allowed",
-
     "gid": 1,
-
     "signature_id": 2002910,
-
     "rev": 6,
-
     "signature": "ET SCAN Potential VNC Scan 5800-5820",
-
     "category": "Attempted Information Leak",
-
     "severity": 2,
-
     "metadata": {
-
       "created_at": [
-
         "2010_07_30"
-
       ],
-
       "updated_at": [
-
         "2010_07_30"
-
       ]
-
     }
-
   },
-
   "flow": {
-
     "pkts_toserver": 1,
-
     "pkts_toclient": 0,
-
     "bytes_toserver": 74,
-
     "bytes_toclient": 0,
-
     "start": "2023-06-06T22:25:33.344112+0600"
-
   }
-
 }
-
 {
-
   "timestamp": "2023-06-06T22:25:33.354084+0600",
-
   "flow_id": 1510657539008292,
-
   "in_iface": "enp0s3",
-
   "event_type": "alert",
-
   "src_ip": "192.168.0.66",
-
   "src_port": 42686,
-
   "dest_ip": "192.168.0.20",
-
   "dest_port": 5432,
-
   "proto": "TCP",
-
   "community_id": "1:p3s6M2mYhPXabDJ67Ns9rrwZvJ4=",
-
   "alert": {
-
     "action": "allowed",
-
     "gid": 1,
-
     "signature_id": 2010939,
-
     "rev": 3,
-
     "signature": "ET SCAN Suspicious inbound to PostgreSQL port 5432",
-
     "category": "Potentially Bad Traffic",
-
     "severity": 2,
-
     "metadata": {
-
       "created_at": [
-
         "2010_07_30"
-
       ],
-
       "former_category": [
-
         "HUNTING"
-
       ],
-
       "updated_at": [
-
         "2018_03_27"
-
       ]
-
     }
-
   },
-
   "flow": {
-
     "pkts_toserver": 1,
-
     "pkts_toclient": 0,
-
     "bytes_toserver": 74,
-
     "bytes_toclient": 0,
-
     "start": "2023-06-06T22:25:33.354084+0600"
-
   }
-
 }
-
 {
-
   "timestamp": "2023-06-06T22:25:33.369014+0600",
-
   "flow_id": 1520840906482038,
-
   "in_iface": "enp0s3",
-
   "event_type": "alert",
-
   "src_ip": "192.168.0.66",
-
   "src_port": 42488,
-
   "dest_ip": "192.168.0.20",
-
   "dest_port": 1521,
-
   "proto": "TCP",
-
   "community_id": "1:8Njmc50iE+SeEx9bDZIhn8Jfnw0=",
-
   "alert": {
-
     "action": "allowed",
-
     "gid": 1,
-
     "signature_id": 2010936,
-
     "rev": 3,
-
     "signature": "ET SCAN Suspicious inbound to Oracle SQL port 1521",
-
     "category": "Potentially Bad Traffic",
-
     "severity": 2,
-
     "metadata": {
-
       "created_at": [
-
         "2010_07_30"
-
       ],
-
       "former_category": [
-
         "HUNTING"
-
       ],
-
       "updated_at": [
-
         "2018_03_27"
-
       ]
-
     }
-
   },
-
   "flow": {
-
     "pkts_toserver": 1,
-
     "pkts_toclient": 0,
-
     "bytes_toserver": 74,
-
     "bytes_toclient": 0,
-
     "start": "2023-06-06T22:25:33.369014+0600"
-
   }
-
 }
-
 {
-
   "timestamp": "2023-06-06T22:25:33.388655+0600",
-
   "flow_id": 1000071826894383,
-
   "in_iface": "enp0s3",
-
   "event_type": "alert",
-
   "src_ip": "192.168.0.66",
-
   "src_port": 58198,
-
   "dest_ip": "192.168.0.20",
-
   "dest_port": 1433,
-
   "proto": "TCP",
-
   "community_id": "1:D+CWDKg0h6iUU4r/3jxnpCVHQdM=",
-
   "alert": {
-
     "action": "allowed",
-
     "gid": 1,
-
     "signature_id": 2010935,
-
     "rev": 3,
-
     "signature": "ET SCAN Suspicious inbound to MSSQL port 1433",
-
     "category": "Potentially Bad Traffic",
-
     "severity": 2,
-
     "metadata": {
-
       "created_at": [
-
         "2010_07_30"
-
       ],
-
       "former_category": [
-
         "HUNTING"
-
       ],
-
       "updated_at": [
-
         "2018_03_27"
-
       ]
-
     }
-
   },
-
   "flow": {
-
     "pkts_toserver": 1,
-
     "pkts_toclient": 0,
-
     "bytes_toserver": 74,
-
     "bytes_toclient": 0,
-
     "start": "2023-06-06T22:25:33.388655+0600"
-
   }
-
 }
-
-
 ```
 
 ### Задание 2
