@@ -90,7 +90,12 @@ tail -f /var/log/suricata/fast.log
 ```
 ![](img/1-5.png)
 
-Просмотр алертов:
+Просмотр алертов по мере выполнения сканирования:
+
+![](img/1-6.png)
+
+![](img/1-7.png)
+
 ```
 jq 'select(.alert)' /var/log/suricata/eve.json
 ```
