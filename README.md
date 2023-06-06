@@ -80,6 +80,15 @@ sudo suricata -T -c /etc/suricata/suricata.yaml -v
 ```
 sudo systemctl restart suricata
 ```
+Запуск прослушивания сетевого интерфейса:
+```
+suricata -c /etc/suricata/suricata.yaml -i enp0s3
+```
+Просмотр лог-файла с обновлением по мере поступления данных:
+```
+tail -f /var/log/suricata/fast.log
+```
+
 ### Задание 2
 
 Проведите атаку на подбор пароля для службы SSH:
