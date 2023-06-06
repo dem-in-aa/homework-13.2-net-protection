@@ -88,6 +88,8 @@ suricata -c /etc/suricata/suricata.yaml -i enp0s3
 ```
 tail -f /var/log/suricata/fast.log
 ```
+![](img/1-5.png)
+
 Просмотр алертов:
 ```
 jq 'select(.alert)' /var/log/suricata/eve.json
