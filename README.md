@@ -254,6 +254,18 @@ jq 'select(.alert)' /var/log/suricata/eve.json
   }
 }
 ```
+Просмотр логов авторизации:
+```
+cat /var/log/auth.log
+```
+![](img/1-8.png)
+
+Просмотр лога **fail2ban**:
+
+```
+cat /var/log/auth.log
+```
+![](img/1-9.png)
 
 ### Задание 2
 
@@ -279,3 +291,41 @@ jq 'select(.alert)' /var/log/suricata/eve.json
 
 
 *В качестве ответа пришлите события, которые попали в логи Suricata и Fail2Ban, прокомментируйте результат.*
+
+<ins>Ответ</ins>:
+
+На защищаемой ВМ создан конфигурационный файл:
+```
+nano /etc/fail2ban/jail.local
+```
+```
+[DEFAULT]
+## Постоянный IP-адрес.
+## Если не переопределить ignoreip здесь,
+## то стоит закомментировать этот параметр в jail.conf.
+ignoreip = 127.0.0.1
+
+[ssh]
+## если в течении 1 часа:
+findtime    = 3600
+## произведено 6 неудачных попыток логина:
+maxretry    = 6
+## то банить IP на 24 часа:
+bantime     = 86400
+```
+![](img/2-1.png)
+
+На атакующей ВМ (Kali Linux) осуществлен переход в каталог, содержащий файлы с логинами и паролями:
+```
+cd /usr/share/wordlists/metasploit/
+```
+![](img/2-2.png)
+
+Запущен брутфорс:
+```
+hydra -L unix_users.txt -P unix_passwords.txt 192.168.0.20 ssh
+```
+![](img/2-3.png)
+
+
+
