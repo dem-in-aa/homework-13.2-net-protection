@@ -263,7 +263,7 @@ cat /var/log/auth.log
 Просмотр лога **fail2ban**:
 
 ```
-cat /var/log/auth.log
+cat /var/log/fail2ban.log
 ```
 ![](img/1-9.png)
 
